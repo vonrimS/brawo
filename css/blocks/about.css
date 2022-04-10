@@ -1,0 +1,54 @@
+#about{
+  background-image: url('../../img/bg/about.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  /* background-color: ; */
+}
+
+#about_pic{
+  background-image: url('../../img/bg/about.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;  
+  background-size: auto 1280px;  
+  height: inherit;
+  width: inherit; 
+  z-index: 15;
+  filter: drop-shadow(6px 10px 20px rgba(0, 0, 0, 0.6)); 
+}
+
+
+
+
+#about .motto{
+  font-family: 'Anton', sans-serif;  
+  font-weight: 400;
+  font-size: 8em;
+  line-height: 13vh;
+  color: white;
+  filter: drop-shadow(6px 4px 0px #9E0020);
+  border: 1px #9E0020;
+  position: absolute;  
+  right: 1vw;
+  padding: 1vw;
+  display: inline;
+  
+  float: right;
+ 
+  
+}
+
+#about .page_num {
+  font-family: 'Anton', sans-serif;  
+  font-size: 350px;
+  color: rgb(253, 253, 253, 0.15);
+  
+  filter: drop-shadow(6px 4px 0px 0.1 #620909);
+ position: absolute;
+ /* display: absolute; */
+ top: -5vw;
+ padding : 1vw;
+  /* z-index: 1; */
+}
