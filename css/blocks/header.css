@@ -179,18 +179,26 @@
     top: 8vh;
     /* background-color: #9e0020c4; */
     background-color: #9e0020;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: left;
     /* justify-content: left; */
     width: 50vw;
     transform: translateX(100%);
+    /* display: none; */
     transition: transform 0.5s ease-in;
   }
+
+
+.header-nav ul{
+  /* display: none; */
+
+}
 
   .nav-active{
     top: 8vh;
     transform: translateX(0%);
+    
   }
 
   .header-nav li + li {
@@ -255,6 +263,10 @@
 @media only screen and (max-width: 576px) {
   .header_container {
     width: 93vw;
+  }
+
+  header{
+    position: fixed;
   }
 
   /* .header-logo {
