@@ -13,42 +13,19 @@ window.addEventListener('scroll', function (e) {
   
 
   if (mottoOffset < 150) {
-    // console.log(mottoList);
+    console.log(mottoList);
     mottoList.forEach((line, index) => {
-      // line.style.animation = '';
-      // line.style.animation = `mottoFade 2.5s ease forwards ${index / 2 + 0.2}s`;
-      if (line.style.animation) {
-        line.style.animationDirection = 'initial';
-        // line.style.animation = `mottoFade 0.5s ease forwards ${index/2 + 0.2}s`;
-      } else {
+      if (line.style.animation.name = 'mottoReveal') {
         // line.style.animation = '';
         line.style.animation = `mottoFade 2.5s ease forwards ${index / 2 + 0.2}s`;
-        // console.log(line.style.animation.name)
-        // line.style.animation = `mottoFade`;
-        // console.log(index/5 + 0.2);
-      }
-    });
-  }
-
-  if(mottoOffset > 150) {
-    mottoList.forEach((line, index) => {
-      if (line.style.animation) {
-
-        line.style.animationDirection = "reverse";
-        
-        line.style.animation = '';
-
-        // line.style.animation = `mottoFade 2.5s ease forwards ${index / 2 + 0.2}s`;
-        // line.style.animation.;
         // line.style.animation = `mottoFade 0.5s ease forwards ${index/2 + 0.2}s`;
       } else {
-        // console.log(line.style.animation.name)
         // line.style.animation = `mottoFade`;
         // console.log(index/5 + 0.2);
       }
     });
   }
-  /*
+  
   if (mottoOffset > 150) {
     mottoList.forEach((line, index) => {
       if (line.style.animation.name='mottoFade') {
@@ -60,7 +37,7 @@ window.addEventListener('scroll', function (e) {
       }
     });
     
-  }*/
+  }
 
     // mottoAllLines.style.opacity = 0;
     // mottoAllLines.style.transitionDuration = "1000ms";
