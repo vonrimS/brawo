@@ -184,7 +184,7 @@
     transform: translateX(100%);
     /* display: none; */
     transition: transform 0.5s ease-in;
-    padding-bottom: 5em;
+    padding-bottom: 7em;
   }
 
   .header-nav ul {

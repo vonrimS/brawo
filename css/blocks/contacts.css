@@ -4,8 +4,8 @@
   grid-template-columns: 1fr;
   /* grid-gap: 1em; */
   padding: 0 4em;
-  padding-top: 12em;
-  padding-bottom: 5em;
+  padding-top: 11em;
+  padding-bottom: 8em;
   /* align-items: center; */
 }
 
@@ -19,11 +19,11 @@
   border-bottom: 1px solid;
   text-align: center;
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 #contacts > .socials {
-  padding-top: 2.5em;
+  padding-top: 2em;
   color: white;
   display: flex;
   justify-content: space-around;
