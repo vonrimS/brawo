@@ -3,6 +3,11 @@
   margin: 0; 
 }
 
+:root {
+  --main-title-font: 'Anton', sans-serif;   
+  --main-font-color: #9E0020;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -93,14 +98,7 @@ h1{
   font-size: 15em;
 }
 
-.splitter{
-  position: absolute;
-  width: 100vw;
-  height: 8vh;
-  background-color: rgb(28,28,28);
-  color: yellow;
-  z-index: 5;
-}
+
 
 .container{
   /* position: relative; */

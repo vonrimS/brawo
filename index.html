@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/reset.css">
 
   <!-- css blocks -->
+  <link rel="stylesheet" href="css/blocks/splitter.css">
   <link rel="stylesheet" href="css/blocks/home.css">
   <link rel="stylesheet" href="css/blocks/about.css">
   <link rel="stylesheet" href="css/blocks/groups.css">
@@ -31,7 +32,7 @@
         <nav class="header-nav">
           <ul class="nav-links">
             <li class="home active"><a href="#home">HOME</a></li>
-            <li class="about"><a href="#about1">ABOUT</a></li>
+            <li class="about"><a href="#about">ABOUT</a></li>
             <li class="groups"><a href="#groups">GROUPS</a></li>
             <li class="for_parents"><a href="#for_parents">FOR PARENTS</a></li>
             <li class="team"><a href="#team">TEAM</a></li>
@@ -56,37 +57,30 @@
 
   <main>
     <section id="home">
-      <div class="blur"></div>
+     
       <div class="container">
-        <div class="container_home">
+       
           <ul id="home_motto">
-            <li class="motto_first_line">CHAMPIONS</li>
-            <li class="motto_second_line">ARE MADE</li>
-            <li class="motto_third_line">WHEN NO ONE</li>
-            <li class="motto_fourth_line">IS WATCHING</li>
+            <motto_li class="motto_first_line">CHAMPIONS</motto_li>
+            <motto_li class="motto_second_line">ARE MADE</motto_li>
+            <motto_li class="motto_third_line">WHEN NO ONE</motto_li>
+            <motto_li class="motto_fourth_line">IS WATCHING</motto_li>
           </ul>
-        </div>        
-      </div>
+             
+        </div>
+      </section>
+      
+      
+      <section id="about" style="background-color: pink" >
+        <splitter class="splitter"></splitter>  
+      <div class="page_name">ABOUT</div>
+   
     </section>
 
-
-    <div class="section_splitter"></div>
-    <!-- <div class="splitter" id="home_splitter"></div> -->
+    <splitter class="splitter">
+      <!-- <div class="move"></div> -->
+    </splitter>
     
-
-    <section id="about1" style="background-color: pink" >
-      <!-- <div class="blur"></div> -->
-      <!-- <div class="container" id="about_container">
-        <div id="about_pic">
-          <div class="page_num">01</div>
-          <div class="motto">
-            <div class="motto_first_line">ABOUT</div>         
-        </div>       
-      </div> -->
-    </section>
-
-    <!-- <div class="splitter" id="about_splitter"></div> -->
-
     <section id="groups" >
       <!-- <div class="blur"></div> -->
       <!-- <div class="container" id="about_container">
@@ -97,7 +91,8 @@
         </div>       
       </div> -->
     </section>
-   
+
+    <splitter class="splitter"></splitter>
 
     <section id="for_parents" >
       <!-- <div class="blur"></div> -->
@@ -164,5 +159,7 @@
     <script src="js/header.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/burger.js"></script>
+    <script src="js/inter_observer.js"></script>
+   
 </body>
 </html>

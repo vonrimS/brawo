@@ -1,28 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 #about{
   background-image: url('../../img/bg/about.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover ;
-  /* background-color: ; */
+  background-size: cover; 
+  display: grid; 
+  grid-template-rows: 30px 1fr 1fr 1fr; 
 }
 
-#about_pic{
-  background-image: url('../../img/bg/about.jpg');
+.page_name{
+  font-family: var(--main-title-font);
+  grid-row: 2;
+  justify-self: top;
+  color: white;
+  font-size: 120px;
+  opacity: 0.4;
+  justify-self: end;
+  align-self: center;
+  right: 0;
+}
+
+#home::after{
+  position: absolute;
+  content: "";
+  background: rgba(177, 133, 21, 0.5); 
+}
+
+#home_pic{
+  background-image: url('../../img/bg/home.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;  
   background-size: auto 1280px;  
   height: inherit;
-  width: inherit; 
-  z-index: 15;
+  width: inherit;  
   filter: drop-shadow(6px 10px 20px rgba(0, 0, 0, 0.6)); 
 }
 
-
-
-
-#about .motto{
+#home .motto{
   font-family: 'Anton', sans-serif;  
   font-weight: 400;
   font-size: 8em;
@@ -30,25 +47,150 @@
   color: white;
   filter: drop-shadow(6px 4px 0px #9E0020);
   border: 1px #9E0020;
-  position: absolute;  
-  right: 1vw;
-  padding: 1vw;
-  display: inline;
+  position: relative;
+  float: left;  
+  width: 100%;
+  padding: 1vw;  
+  margin-left: 1vw; 
+  margin-top: 25vh;
+
+  display: none;
+}
+
+
+/* media queries */
+@media only screen and (min-width: 1701px){
   
-  float: right;
- 
+} 
+
+@media only screen and (max-width: 1700px) {
+  
+} 
+
+
+@media only screen and (max-width: 1585px) {
   
 }
 
-#about .page_num {
-  font-family: 'Anton', sans-serif;  
-  font-size: 350px;
-  color: rgb(253, 253, 253, 0.15);
+@media only screen and (max-width: 1400px) {
+   
+}
+
+
+@media only screen and (max-width: 1200px) {  
   
-  filter: drop-shadow(6px 4px 0px 0.1 #620909);
- position: absolute;
- /* display: absolute; */
- top: -5vw;
- padding : 1vw;
-  /* z-index: 1; */
+} 
+
+
+@media only screen and (max-width: 992px) {   
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+ 
+}
+
+@media only screen and (max-width: 576px) { 
+
+
+  
+
+  #home > .container{
+    background-image: url('../../img/bg/home1.jpg');
+    /* background-image: url('../../img/bg/home.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; 
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+  .container{
+    display: grid;
+    grid-template: 1fr 1fr;
+    /* background-color: tomato; */
+    align-items: end;
+    justify-content: start;
+    height: 100vh;
+    padding-bottom: 7em;
+  }
+
+  .container ul{
+   /* background-color: rgb(75, 168, 78); */
+   justify-content: start;
+   align-items: bottom;    
+    
+ 
+    
+    /* background-color: yellow; */
+    font-family: 'Anton', sans-serif;  
+    font-weight: 400;
+    font-size: 4em;
+    line-height: 10vh;
+    color: white;
+    filter: drop-shadow(6px 4px 0px #9E0020);
+    border: 1px #9E0020;
+    position: relative;
+    /* float: left;   */
+    width: 100%;
+    
+    /* display:inline-block;
+    vertical-align: bottom; */
+    /* padding: 1vw; */
+    
+    margin-left: 4vw; 
+    /* margin-top: 10vh; */
+  }
+
+  
+  
+  
+}
+
+
+/* @keyframes mottoFade {
+  from { 
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }  
+} */
+
+@keyframes mottoFade {
+  from { 
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  to{
+    opacity: 0;
+    transform: translateX(-100px)
+  }  
+}
+
+@keyframes mottoReveal {
+  
+  from { 
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  
+} 
+
+.fade-in {
+  /* opacity: 0; */
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
 }

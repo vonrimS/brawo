@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-
-
-#home::after{
-  position: absolute;
-  content: "";
-  background: rgba(177, 133, 21, 0.5); 
+#about_pic{
+  background-image: url('../../img/bg/about.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;  
+  background-size: auto 1280px;  
+  height: inherit;
+  width: inherit; 
+  z-index: 15;
+  filter: drop-shadow(6px 10px 20px rgba(0, 0, 0, 0.6)); 
 }
 
-#home .motto{
+
+
+
+#about .motto{
   font-family: 'Anton', sans-serif;  
   font-weight: 400;
   font-size: 8em;
@@ -16,15 +22,28 @@
   color: white;
   filter: drop-shadow(6px 4px 0px #9E0020);
   border: 1px #9E0020;
-  position: relative;
-  float: left;  
-  width: 100%;
-  padding: 1vw;  
-  margin-left: 1vw; 
-  margin-top: 25vh;
-  display: none;
+  position: absolute;  
+  right: 1vw;
+  padding: 1vw;
+  display: inline;
+  
+  float: right;
+ 
+  
 }
 
+#about .page_num {
+  font-family: 'Anton', sans-serif;  
+  font-size: 350px;
+  color: rgb(253, 253, 253, 0.15);
+  
+  filter: drop-shadow(6px 4px 0px 0.1 #620909);
+ position: absolute;
+ /* display: absolute; */
+ top: -5vw;
+ padding : 1vw;
+  /* z-index: 1; */
+}
 
 /* media queries */
 @media only screen and (min-width: 1701px){
@@ -60,10 +79,12 @@
 }
 
 @media only screen and (max-width: 576px) { 
-    
 
-  #home > .container{
-    background-image: url('../../img/bg/home1.jpg');
+
+  
+
+  #about > .container{
+    background-image: url('../../img/bg/about.jpg');
     /* background-image: url('../../img/bg/home.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
@@ -71,22 +92,26 @@
     background-position: 50% 50%; 
     width: 100vw;
     height: 100vh;
+
   }
 
   .container{
     display: grid;
-    grid-template: 1fr 7em;
+    grid-template: 1fr 1fr;
     /* background-color: tomato; */
     align-items: end;
     justify-content: start;
     height: 100vh;
-   
+    padding-bottom: 7em;
   }
 
   .container ul{
    /* background-color: rgb(75, 168, 78); */
    justify-content: start;
-   align-items: bottom;     
+   align-items: bottom;    
+    
+ 
+    
     /* background-color: yellow; */
     font-family: 'Anton', sans-serif;  
     font-weight: 400;
@@ -98,7 +123,6 @@
     position: relative;
     /* float: left;   */
     width: 100%;
-    z-index: 2;
     
     /* display:inline-block;
     vertical-align: bottom; */
@@ -108,29 +132,7 @@
     /* margin-top: 10vh; */
   }
 
-
-  .container > splitter{
-    align-self: end;
-  }
-
-  motto_li{    
-    position: relative;
-    /* transform: -200px; */
-    opacity: 0;
-    transition: all 1s ease-out; 
-    left: -10px;
-  }
-
-  .show{
-    left: 0px;
-    opacity: 1;
-  }
-
-
-
   
   
   
 }
-
-

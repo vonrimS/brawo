@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-
+#home{
+  background-image: url('../../img/bg/home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
 
 #home::after{
   position: absolute;
   content: "";
   background: rgba(177, 133, 21, 0.5); 
+}
+
+#home_pic{
+  background-image: url('../../img/bg/home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;  
+  background-size: auto 1280px;  
+  height: inherit;
+  width: inherit;  
+  filter: drop-shadow(6px 10px 20px rgba(0, 0, 0, 0.6)); 
 }
 
 #home .motto{
@@ -22,6 +39,7 @@
   padding: 1vw;  
   margin-left: 1vw; 
   margin-top: 25vh;
+
   display: none;
 }
 
@@ -60,7 +78,9 @@
 }
 
 @media only screen and (max-width: 576px) { 
-    
+
+
+  
 
   #home > .container{
     background-image: url('../../img/bg/home1.jpg');
@@ -71,22 +91,26 @@
     background-position: 50% 50%; 
     width: 100vw;
     height: 100vh;
+
   }
 
   .container{
     display: grid;
-    grid-template: 1fr 7em;
+    grid-template: 1fr 1fr;
     /* background-color: tomato; */
     align-items: end;
     justify-content: start;
     height: 100vh;
-   
+    padding-bottom: 7em;
   }
 
   .container ul{
    /* background-color: rgb(75, 168, 78); */
    justify-content: start;
-   align-items: bottom;     
+   align-items: bottom;    
+    
+ 
+    
     /* background-color: yellow; */
     font-family: 'Anton', sans-serif;  
     font-weight: 400;
@@ -98,7 +122,6 @@
     position: relative;
     /* float: left;   */
     width: 100%;
-    z-index: 2;
     
     /* display:inline-block;
     vertical-align: bottom; */
@@ -108,29 +131,52 @@
     /* margin-top: 10vh; */
   }
 
-
-  .container > splitter{
-    align-self: end;
-  }
-
-  motto_li{    
-    position: relative;
-    /* transform: -200px; */
-    opacity: 0;
-    transition: all 1s ease-out; 
-    left: -10px;
-  }
-
-  .show{
-    left: 0px;
-    opacity: 1;
-  }
-
-
-
   
   
   
 }
 
 
+/* @keyframes mottoFade {
+  from { 
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }  
+} */
+
+@keyframes mottoFade {
+  from { 
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  to{
+    opacity: 0;
+    transform: translateX(-100px)
+  }  
+}
+
+@keyframes mottoReveal {
+  
+  from { 
+    opacity: 0;
+    transform: translateX(-100px)
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px)
+  }
+  
+} 
+
+.fade-in {
+  /* opacity: 0; */
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
