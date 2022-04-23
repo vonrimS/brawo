@@ -1,70 +1,46 @@
 window.addEventListener('DOMContentLoaded', setup);
 
 function setup() {
-  const options = {};
+  const options = {
+    root: null,
+    rootMargin: '-300px 0px 300px 0px',
+  };
 
   const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      // console.log(entry)
-      if (entry.isIntersecting){
-        entry.target.classList.add('show')
-      } 
-      if (!entry.isIntersecting && entry.target.classList.contains('show')){
-        entry.target.classList.remove('show')
-      }
-        // entry.target.classList.toggle('show')
-      
-      // if(entry.isIntersecting){
-      //   entry.target.classList.toggle('show')
-      // }else{
-      //   return
-      // }
-    })
-  }, options);
-  
-  const squares = document.querySelectorAll('motto_li')
-  squares.forEach(square => observer.observe(square))
-
-
-  const split_options = {
-    rootMargin: '-20px'
-    // threshold: [1, 0.5]
-  }
-
-  const split_observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       // console.log(entry.target)
-      if(entry.isIntersecting){
-        entry.target.classList.toggle('spread-up')
-
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
       }
-      // if (entry.isIntersecting && entry.target.classList.contains('spread-up')){
-      //   entry.target.classList.remove('spread-up')
-      // }
-      // if (entry.isIntersecting && entry.target.classList.contains('spread-up')){
-      //   entry.target.classList.remove('spread-up')
-      // }
+      if (!entry.isIntersecting && entry.target.classList.contains('show')) {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, options);
 
-      // if (entry.isIntersecting){
-      //   entry.target.classList.add('show')
-      // } 
-      // if (!entry.isIntersecting && entry.target.classList.contains('show')){
-      //   entry.target.classList.remove('show')
-      // }
+  const motto_lines = document.querySelectorAll('#home_motto > li');
+  console.log(motto_lines)
+  // const motto_lines = document.querySelectorAll('motto_li');
+  motto_lines.forEach((motto_line) => observer.observe(motto_line));
 
-        // entry.target.classList.toggle('show')
-      
-      // if(entry.isIntersecting){
-      //   entry.target.classList.toggle('show')
-      // }else{
-      //   return
-      // }
-    })
-  }, split_options);
+  const page_name_observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      // console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        // observer.unobserve(entry.target);
+      }
+      if (!entry.isIntersecting && entry.target.classList.contains('appear')) {
+        entry.target.classList.remove('appear');
+      }
+    });
+  }, {
+    root: null,
+    // rootMargin: '100px 0px 30px 0px'
+    threshold: [0.5, 0]
+  });
 
-  const splitters = document.querySelectorAll('splitter');
-  splitters.forEach(s => split_observer.observe(s))
-
-
-
+  const page_names = document.querySelectorAll('page_name')
+  // console.log(page_names)
+  page_names.forEach(n => page_name_observer.observe(n))
 }

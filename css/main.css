@@ -121,6 +121,28 @@ h1{
 }
 
 
+.container > .page_name{  
+  font-family: var(--main-title-font);
+  grid-row: 1;
+  justify-self: center;
+  font-size: 10em;  
+  opacity: 0;  
+  align-self: center;
+  margin-bottom: -150px;
+  transition: all 2s ease-out;   
+  background: -webkit-linear-gradient( rgba(255, 255, 255, 0.4), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(6px 4px 0px #0000000b);
+}
+
+.container > .appear{
+  margin-bottom: 0px;
+  opacity: 1;
+}
+
+
+
 /* media queries */
 @media only screen and (min-width: 1701px){
   .container{  
